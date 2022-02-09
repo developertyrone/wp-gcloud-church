@@ -1,0 +1,29 @@
+
+div.anythingSlider {display: block;width: 100%;height: 337px;margin: 0;overflow: hidden;}
+ul#slides{width:960px; height:337px;float:left;overflow: hidden; overflow:hidden;}
+ul#slides li {width: 960px; height:337px; margin:0; float:left; padding:0; position:relative; overflow:hidden;}
+
+
+div.anythingSlider .anythingWindow {overflow: hidden;position: relative;width: 100%;height: 100%;}
+div.anythingSlider {position: relative;}
+ul.anythingBase {background: transparent;list-style: none;position: absolute;top: 0;left: 0;margin: 0;padding: 0;}
+ul.anythingBase li.panel {background: transparent;display: block;overflow: hidden;float: left;padding: 0;margin: 0;}
+/* Navigation Arrows */
+div.anythingSlider .arrow {top: 150px;position: absolute;display: block;z-index:1100;}
+div.anythingSlider .arrow a {display: block;height:30px;width:30px;text-align: center;outline: 0;background: url(../images/arrows.png) no-repeat;}
+div.anythingSlider .arrow a span { display: block; text-indent: -9999px; }
+div.anythingSlider .forward { right: 10px; }
+div.anythingSlider .back { left: 10px; }
+div.anythingSlider .forward a {background-position:-30px top;}
+div.anythingSlider .back a { background-position:left top;}
+
+
+div.anythingSlider .forward.disabled { display: none; } /* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+div.anythingSlider .back.disabled { display: none; }
+div.anythingSlider .anythingControls { outline: 0; display: none; }
+
+div.anythingSlider .thumbNav {padding:0;text-align:center;position:absolute; z-index:1100; top:25px; right:25px;}
+div.anythingSlider .thumbNav li { float:left;list-style-type:none;}
+div.anythingSlider .thumbNav a {display: block;text-decoration:none; line-height: 20px; border-left:1px #767675 solid; border-top:1px #767675 solid; text-align:center;padding: 0;height: 20px;margin: 0 0 0 2px;width:20px;color:#4d4d4d;	outline: 0;background:#949493;}
+div.anythingSlider .thumbNav a:hover {background:#282828; border-color:#282828; color:#fff;}
+div.anythingSlider.activeSlider .thumbNav a.cur {background:#282828; border-color:#282828; color:#fff;}

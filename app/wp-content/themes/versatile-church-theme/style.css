@@ -1,0 +1,941 @@
+/*  
+Theme Name: Versatile Church WordPress Theme
+Version: 1.0
+Description: WordPress Theme for Churches and Non-Profit Organizations
+Author: Vandelay Design
+Author URI: http://vandelaydesign.com
+This theme is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+All files, unless otherwise stated, are released under the GNU General Public License
+
+version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
+
+*/
+
+/*
+
+	0.	CSS Reset & Clearfix
+	1.	Document Setup (body, common classes, structure etc)
+	2.	Header Styles
+	3.	Navigation Menu Style
+	4.	Sliders & Containers
+	5.	Post & Entry Styles
+	6.	Pagination
+	7.	Widgets Styles
+	8.	Comments & Respond Form
+	9.	Footer Styles
+	10.	Custom Fonts Defination
+	11.	Media Queries
+	12.	Shortcode Styles
+
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	0.	CSS Reset & Clearfix - http://meyerweb.com/eric/tools/css/reset/
+/*-----------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	outline:none;
+}
+img, object, embed {
+	max-width: 100%;
+}
+video{
+	width:100%;
+	height:auto;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	01.	Document Setup
+/*-----------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight:normal;
+}
+strong {
+	font-weight:bold;
+}
+i, em {
+	font-style:italic;
+}
+.left {
+	float:left;
+}
+.right {
+	float:right;
+}
+.alignleft{
+	text-align:left;	
+}
+.alignright{
+	text-align:right;	
+}
+.aligncenter{
+	text-align:center;	
+}
+.clear  {
+	clear:both;
+	line-height:1px;
+	height:1px;
+}
+textarea{
+	overflow:auto;
+	font-family:Arial, Helvetica, sans-serif; /* Body Font Family Will Come Here */
+}
+a {
+	color:#256dbf;
+	text-decoration:underline;
+}
+a:hover {
+	color:#f59c29;
+	text-decoration:none;
+}
+b {
+font-weight:normal;
+}
+address {
+	font-style:normal;
+}
+p {
+	line-height:22px;
+}
+h1, h2, h3 ,h4 ,h5, h6 {
+	color:#000;
+}
+h1 a, h2 a, h3 a ,h4 a ,h5 a, h6 a {
+	color:#000;
+}
+#navigation select, #navigation .select{
+	display:none;
+}
+.style-select{
+    	position:relative;
+	width:100%;
+}
+select.select{
+   	position:relative;
+    	z-index:10;
+    	width:100% !important;
+    	height:34px !important;
+    	line-height:34px;
+}
+span.select{
+    	position:absolute;
+    	bottom:0;
+    	float:left;
+    	left:0;
+    	width:100%;
+    	height:34px;
+    	line-height:34px;
+    	text-indent:10px;
+    	background:url(images/bg_select.png) no-repeat right center;
+    	cursor:default;
+    	z-index:1;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+.wp-caption css {}
+.wp-caption-text{}
+.sticky css{}
+.gallery-caption{}
+.bypostauthor{}
+html {
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 0 -51px 0;
+}
+.push {
+	height: 45px;
+	clear:both;
+}
+body {
+	background:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#333;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	02.	Header Styles
+/*-----------------------------------------------------------------------------------*/
+#header-bg {
+	width:100%;
+	background:#efefef;
+}
+#logo {
+	display:block;
+	font-size:30px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	height:122px;
+	color:#000;
+}
+#logo a {
+	color:#000;
+	text-decoration:none;
+}
+#logo div{
+	display:table;
+	height:122px;
+	width:100%;
+}
+#logo div span{
+	display:table-cell;
+    	vertical-align:middle;
+}
+#logo img{
+	max-width:420px;
+	max-height:100px;
+	height:auto;
+}
+a.button1 {
+	background:url(images/ico_location.png) no-repeat 13px 10px #f59c29;
+	display:block;
+	float:right;
+	margin-top:39px;
+	font-size:18px;
+	color:#fff;
+	padding:11px 11px 9px 40px;
+	text-decoration:none;
+	line-height:23px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+a.button1 img {
+	float:left;
+	margin-right:8px;
+}
+a.button1:hover {
+	background-color:#124a88;
+	color:#fff;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	03.	Navigation Menu Styles
+/*-----------------------------------------------------------------------------------*/
+#navigation {
+	background:#256dbf;
+	border-bottom:solid 3px #124a88;
+	position:relative;
+	height:50px;
+	z-index:150;
+}
+#navigation li {
+	float:left;
+	font-size:16px;
+	color:#fff;
+	padding:17px 40px 17px 0;
+	position:relative;
+	z-index:150;
+}
+#navigation a, #navigation ul li:hover li a, #navigation li.current-menu-item li a {
+	color:#fff;
+	text-decoration:none;
+}
+#navigation a:hover, #navigation li.current-menu-item a, #navigation li.current-menu-parent a, #navigation ul li li a:hover, #navigation li.current-menu-item li a:hover, #navigation li li.current-menu-item a, #navigation li:hover li.current-menu-item a{
+	color:#f0f235;
+}
+#navigation ul ul { 
+	visibility:hidden;
+	position:absolute;
+	top:100%;
+	left:-10px;
+	font-size:60%;
+	z-index:10000;
+	height:auto;
+	margin:0;
+	padding:10px 0;
+	background:#124a88;
+	width:auto;
+}
+#navigation ul ul li { 
+	float:none;
+	margin:0;
+	text-align:left;
+	font-size:16px;
+	display:block;
+	white-space:nowrap;
+	padding:10px 20px 10px 10px;
+}
+#navigation ul ul ul { 
+	left: 100%; 
+	top: 0;
+}
+#navigation ul li:hover ul {
+	visibility: visible;
+}	
+/*-----------------------------------------------------------------------------------*/
+/*	04.	Slider & Containers
+/*-----------------------------------------------------------------------------------*/
+#showcase{
+	width:100%;
+	border-bottom:solid 1px #d2d2d2;
+}
+.slider-wrapper{
+	border:solid 1px #d2d2d2;
+	background:#fff;
+	padding:9px;
+	margin-bottom:55px;
+}
+#slider{
+	width:920px;
+	height:405px;
+	overflow:hidden;
+}
+#slider img{
+	width:920px;
+	height:405px;
+}
+
+.nivoSlider img{
+	max-width:none;
+}
+#container {
+	width:100%;
+	padding:40px 0 25px 0;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	05.	Post & Entry Styles
+/*-----------------------------------------------------------------------------------*/
+h2.post-title {
+	font-size:24px;	
+	padding-bottom:8px;
+}
+h2.post-title a{
+	text-decoration:none;
+}
+h2.page-title {
+	font-size:24px;
+	padding-bottom:30px;
+}
+h2.title {
+	font-size:24px;
+	padding:0 10px 18px 10px;
+}
+h3.result-heading {
+	font-size:18px;
+	padding-bottom:22px;
+}
+.post.listing {
+	padding:0 0 15px 0;
+	margin:0 0 35px 0;
+	border-bottom:solid 1px #d2d2d2;
+}
+.results .post.listing{
+	margin:0 0 15px 0;
+}
+.post.listing h2 { padding-bottom:10px; }
+
+.thumb {
+	width:auto;
+	display:inline-block;
+	border:solid 1px #d2d2d2;
+	padding:9px;
+	padding-bottom:8px;
+	max-width:100%;
+	margin-bottom:30px;
+	-webkit-box-sizing: border-box;
+       	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.post .meta {
+	display:block;
+	font-size:14px;
+	padding-bottom:25px;
+}
+.post.listing .meta {
+	padding-bottom:30px;
+}
+.results .post.listing .meta{
+	padding-bottom:3px;
+}
+.single-events #comments {
+	padding-top:15px;
+}
+ul.single-list{
+	margin:0 0 30px 0;
+}
+ul.items-list li, ul.single-list li{
+	margin-bottom:22px;
+	width:100%;
+	line-height:22px;
+}
+ul.items-list a{
+	text-decoration:none;
+}
+ul.single-list li{
+	margin-bottom:0;
+}
+.entry{
+	line-height:22px;
+}
+.entry p {
+	padding-bottom:20px;
+}
+.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
+	font-size:18px;
+	padding-bottom:20px;
+}
+.entry h1{
+	font-size:24px;
+	line-height:30px;
+}
+.entry h3 {
+	font-size:18px;
+	line-height:24px;
+	padding-bottom:25px;
+	padding-top:15px;
+}
+.entry h4, .entry h5, .entry h6 {
+	font-size:14px;
+	line-height:20px;
+	padding-bottom:30px;
+	padding-top:15px;
+}
+.entry blockquote  {padding: 10px 20px 10px 50px; background:url(images/blockquote.png) no-repeat; }
+
+.entry blockquote p  { font-style:italic; }
+
+.entry li{padding:3px 0;}
+
+.entry ul  { margin: 0 0 15px 0; padding: 0 0 0 15px; }
+
+.entry ul li{list-style-type:square;}
+
+.entry ul ul  { margin: 0; }
+
+.entry li{line-height:20px;}
+
+.entry ul ul li  { list-style-type: circle; }
+
+.entry ol  { margin: 0 0 15px 0; padding: 0 0 0 20px; }
+
+.entry ol ol  { margin: 0; }
+
+.entry  ol li  { list-style-type: decimal; }
+
+.entry  ol li ol li  { list-style-type: lower-latin; }
+
+.entry pre{ white-space:normal;}
+.entry .tabs ul li, .entry .tabs ul li li{
+	list-style-type:none;
+}
+.videocol {
+	padding-bottom:20px;
+	display:block;
+}
+.audiocol {
+	padding:20px 0;
+	display:block;
+}
+.audiocol .audio-player {
+	max-width: 100%;
+	min-width: 100%;
+	margin-bottom:27px;
+}
+.mejs-background{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	06.	Pagination
+/*-----------------------------------------------------------------------------------*/
+.pagination {
+	font-size:14px;
+	font-weight:bold;
+	padding:0 0 20px 0;
+}
+.pagination .nav-next{
+	float:right;
+	width:50%;
+	text-align:right;
+}
+.pagination .nav-previous{
+	float:left;
+	width:50%;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	07.	Widgets Styles
+/*-----------------------------------------------------------------------------------*/
+.widget {
+	margin-bottom:40px;
+	display:block;
+	width:100%;
+}
+.widget.columns{
+	margin-bottom:0;
+}
+.widget h4 {
+	font-size:24px;
+	padding-bottom:25px;
+}
+.widget li {
+	line-height:22px;
+	padding:18px 0 0 0;
+}
+.widget ul li:first-child { padding-top:0; }
+
+.widget.columns li strong a {
+	text-decoration:none;
+	font-weight:bold;
+}
+.widget li a{
+	text-decoration:none;
+	font-weight:bold;
+}
+.widget.columns li a{
+	text-decoration:underline;
+	font-weight:normal;
+}
+.widget .input, .widget input[type="text"] {
+	background:#fff;
+	width:188px;
+	height:18px;
+	font-size:11px;
+	line-height:18px;
+	color:#0f0f0f;
+	float:left;
+	border:solid 1px #d2d2d2;
+	padding:5px 10px;
+	margin:0 10px 0 0;
+}
+.widget .button, .widget input[type="submit"] {
+	background:#256dbf;
+	width:60px;
+	height:30px;
+	text-align:center;
+	-webkit-appearance: none;
+	padding:0;
+	font-size:14px;
+	color:#fff;
+	border:none;
+	float:left;
+	cursor:pointer;
+}
+.widget .button:hover, .widget input:hover[type="submit"] {
+	background-color:#f59c29;
+}
+.widget p, .widget_text {
+	line-height:22px;
+}
+.widget p{
+	padding-bottom:15px;
+}
+.widget p a:hover {
+	text-decoration:underline;
+}
+
+/* Search Box Title Hide */
+.widget_search label.screen-reader-text{display:none;}
+
+/*-----------------------------------------------------------------------------------*/
+/*	08.	Comments & Respond Form
+/*-----------------------------------------------------------------------------------*/
+#comments {
+	padding:35px 0 30px 0;
+}
+#comments h4 {
+	font-size:14px;
+	padding-bottom:20px;
+}
+#comments li {
+	border-bottom:solid 1px #d2d2d2;
+	padding:20px 0;
+}
+#comments li .comment-info {
+	float:left;
+	padding-right:20px;
+}
+#comments li .commento {
+	padding-left:85px;
+}
+#comments li .name {
+	display:block;
+	font-size:18px;
+	padding-bottom:12px;
+}
+#comments li .comment-date {
+	display:block;
+	padding-bottom:20px;
+}
+
+#comments ol ul {
+	border-top:solid 1px #d2d2d2;
+	border-bottom:none;
+	margin-top:20px;
+}
+#comments li li {
+	border-top:solid 1px #d2d2d2;
+	padding-left:85px;
+	border-bottom:none;
+	padding-bottom:0;
+	margin-top:20px;
+}
+#comments li li.first, #comments li li:first-child { border-top:none; padding-bottom:0; margin-top:0; }
+
+#comments li .comment-text p {
+	padding-bottom:20px;
+	line-height:22px;
+}
+#respond{
+	width:100%;
+	padding:20px 0;
+}
+#respond h4{
+	font-size:18px;
+	padding:0 0 15px 0;
+}
+#respond .row1 {
+	width:100%;
+	height:60px;
+}
+#respond label{
+	display:block;
+	float:left;
+	padding:13px 0;
+}
+.cancel-comment-reply{
+	padding-bottom:15px;
+}
+#respond .input{
+	width:278px;
+	height:18px;
+	float:left;
+	background:#fff;
+	border:solid 1px #d2d2d2;
+	margin:0 20px 0 0;
+	padding:10px;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	        border-radius:3px;
+}
+#respond .textarea{
+	width:378px;
+	height:178px;
+	background:#fff;
+	overflow:auto;
+	border:solid 1px #d2d2d2;
+	padding:10px;
+	margin:0 0 20px 0;
+	-webkit-border-radius:3px;
+	   -moz-border-radius:3px;
+	        border-radius:3px;
+}
+#respond .button {
+	background:#256dbf;
+	width:72px;
+	height:30px;
+	float:left;
+	cursor:pointer;
+	font-size:14px;
+	border:none;
+	color:#fff;
+	text-align:center;
+	-webkit-appearance: none;
+	padding:0;
+}
+#respond .button:hover {
+	background:#f59c29;
+}
+/*-----------------------------------------------------------------------------------*/
+/*	09.	Footer Styles
+/*-----------------------------------------------------------------------------------*/
+#footer {
+	border-top:solid 1px #d2d2d2;
+	background:#efefef;
+	padding:14px 0;
+	min-height: 17px;	
+	clear: both;
+}
+
+#footer p {
+	font-weight:bold;
+}
+
+#footer ul { 
+	float:right;
+	margin-top:4px; 
+}
+#footer li {
+	float:left;
+	color:#256dbf;
+	padding-left:18px;
+}
+#footer a{
+	text-decoration:none;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	10.	Custom Fonts
+/*-----------------------------------------------------------------------------------*/
+h1, h2, h3 ,h4 ,h5, h6, #comments li .name { 
+	font-family: 'Droid Serif', serif;
+	font-weight:400;
+}
+#navigation, .button1 { 
+	font-family: 'Droid Sans', sans-serif;
+	font-weight:400; 
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	11.	Media Queries
+/*-----------------------------------------------------------------------------------*/
+/* #Tablet (Portrait)
+================================================== */
+/* Note: Design for a width of 768px */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+		
+.widget .input, .widget input[type="text"] {
+	width:128px;
+}
+#slider, #slider img{
+	width:728px;
+	height:320px;
+}
+}
+	
+	
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+
+ @media only screen and (max-width: 767px) {
+#navigation ul{
+	display:none;
+}
+#navigation .select, #navigation select{
+	display: block;
+}
+.style-select{
+	margin-top:8px;
+}		
+#logo {
+	text-align:center;
+	font-size:24px;
+}
+#logo img{
+	max-width:300px;
+}
+a.button1 {
+	margin:0 auto 20px auto;
+	float:none;
+	width:150px;
+}
+.widget.columns{
+	padding-bottom:45px;
+}
+.homepage-widgets .columns.six{
+	padding-bottom:10px;
+}
+.widget h4 {
+	font-size:18px;
+}
+#footer {
+	padding-bottom:4px;
+}
+#footer ul {
+	float:left;
+}
+#footer li {
+	float:left;
+	padding:0 18px 9px 0;
+}
+#comments .comment-info {
+	display:none;
+}
+#comments li .commento{
+	padding-left:0;
+}
+#comments li li {
+	padding-left:0;	
+}
+#respond .input{
+	width:148px;
+}
+#respond textarea{
+	max-width:93%;
+}
+.slider-wrapper{
+	padding:4px;
+}
+#slider, #slider img{
+	width:290px;
+	height:127px;
+}
+#leftcol{
+	padding-bottom:30px;
+}
+}
+	
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+body{
+	font-size:14px;
+}		
+#navigation ul{
+	display:none;
+}
+#navigation .select, #navigation select{
+	display: block;
+}
+.style-select{
+	margin-top:8px;
+}
+#logo {
+	text-align:center;
+	font-size:24px;
+}
+#logo img{
+	max-width:420px;
+}
+a.button1 {
+	margin:0 auto 20px auto;
+	float:none;
+	width:150px;
+}
+.widget.columns{
+	padding-bottom:45px;
+}
+.homepage-widgets .columns.six{
+	padding-bottom:10px;
+}
+.widget h4 {
+	font-size:18px;
+}
+#footer {
+	padding-bottom:4px;
+}
+#footer ul {
+	float:left;
+}
+#footer li {
+	float:left;
+	padding:0 18px 9px 0;
+}
+#comments .comment-info {
+	display:block;
+}
+#comments li .commento {
+	padding-left:85px;
+}
+#comments li li  {
+	padding-left:85px;	
+}
+#respond .input{
+	width:278px;
+}
+#respond textarea{
+	max-width:95%;
+}
+.slider-wrapper{
+	padding:4px;
+}
+#slider, #slider img{
+	width:410px;
+	height:180px;
+}
+#leftcol{
+	padding-bottom:30px;
+}
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	12.	Shortcode Styles
+/*-----------------------------------------------------------------------------------*/
+
+/* Columns */
+.one_half { width: 48%; }
+.one_third { width: 30.66%; }
+.two_third { width: 65.33%; }
+.one_fourth { width: 22%; }
+.three_fourth { width: 74%; }
+.one_fifth { width: 16.8%; }
+.two_fifth { width: 37.6%; }
+.three_fifth { width: 58.4%; }
+.four_fifth { width: 79.2%; }
+.one_sixth { width: 13.33%; }
+.five_sixth { width: 82.67%; }
+
+.one_half,
+.one_third,
+.two_third,
+.three_fourth,
+.one_fourth,
+.one_fifth,
+.two_fifth,
+.three_fifth,
+.four_fifth,
+.one_sixth,
+.five_sixth {
+	position: relative;
+	margin-right: 4%;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.column-last {
+	margin-right: 0!important;
+	clear: right;
+}

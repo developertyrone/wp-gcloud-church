@@ -1,0 +1,1 @@
+[08-Nov-2011 19:08:34] PHP Fatal error:  Call to undefined function add_action() in /home/vandela/public_html/vandelaydesign.net/wp-content/themes/church-wp-1/functions/admin-custom.php on line 303

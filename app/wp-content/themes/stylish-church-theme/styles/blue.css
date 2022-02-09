@@ -1,0 +1,65 @@
+a { 
+	color:#3d6bae;
+}
+.button2 {
+	background:#3d6bae;
+}
+#top {
+	background:#6796da;
+}
+#top_bar {
+	border-top:solid 1px #3d6bae;
+}
+.navigation a:hover {
+	color:#3d6bae;
+}
+.navigation ul li:hover a {
+	color:#3d6bae;
+}
+.navigation ul ul li a:hover {
+	color:#3d6bae;
+}
+.feature1 li span.list_title, .widget li span.list_title {
+	color:#3d6bae;
+}
+.feature1 .biglink a:hover {
+	background:#fff;
+	color:#3d6bae;
+	border-color:#3d6bae;
+}
+#footer_nav a:hover, #logo a:hover {
+	color:#3d6bae;
+}
+.entry.listing h4 {
+	color:#3d6bae;
+}
+.pagination span.current, .pagination a:hover {
+	background:#3d6bae;
+	border-color:#3d6bae;
+}
+
+/* call background */
+.button {
+	background:url(blue/bg_button_sprite.gif) no-repeat left top;
+}
+.button:hover {
+	background-position:left bottom;
+}
+a.link1 {
+	background:url(blue//bg_link1_left_sprite.png) no-repeat left top;
+}
+a.link1 strong {
+	background:url(blue/bg_link1_right_sprite.png) no-repeat right top;
+}
+a.link1:hover, a.link2 {
+	background-position:left bottom;
+}
+a.link1:hover strong, a.link2 strong {
+	background-position:right bottom;
+}
+a.link2:hover {
+	background-position:left top;
+}
+a.link2:hover strong {
+	background-position:right top;
+}

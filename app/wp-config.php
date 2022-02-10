@@ -36,7 +36,6 @@ define('FORCE_SSL_LOGIN', true);
 
 if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false){
        $_SERVER['HTTPS']='on';
-       $_SERVER['SERVER_PORT'] = 443;
 }
 if (!empty( $_SERVER['HTTP_X_FORWARDED_HOST'] ) ) {
     $_SERVER['HTTP_HOST'] = $_SERVER['HTTP_X_FORWARDED_HOST'];
